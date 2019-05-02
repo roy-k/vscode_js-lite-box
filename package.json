@@ -1,0 +1,20 @@
+{
+    "name": "js-lite-box",
+    "displayName": "js-lite-box",
+    "description": "个人常用个性化设置与开发工具",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
