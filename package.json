@@ -3,9 +3,19 @@
     "displayName": "js-lite-box",
     "description": "个人常用个性化设置与开发工具",
     "version": "0.0.1",
+    "icon": "assets/images/icon.jpg",
+    "publisher": "roy",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/roy-k/vscode_js-lite-box.git"
+      },
     "engines": {
         "vscode": "^1.33.0"
     },
+  "keywords": [
+    "js",
+    "snippest"
+  ],
     "categories": [
         "Snippets"
     ],

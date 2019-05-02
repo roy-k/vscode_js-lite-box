@@ -1,1 +1,190 @@
-{}
+{
+    "import": {
+        "prefix": "imp",
+        "body": "import ${2} from '${1:module}'$0",
+        "description": "Imports module"
+    },
+    "importNoModuleName": {
+        "prefix": "imn",
+        "body": "import '${1:module}'$0",
+        "description": "Imports entire module"
+    },
+    "importDestructing": {
+        "prefix": "imd",
+        "body": "import { $2 } from '${1:module}'$0",
+        "description": "Imports only a portion of the module in ES6 syntax"
+    },
+
+    "exportNamedFunction": {
+        "prefix": "edfn",
+        "body": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n}\n",
+        "description": "Export named function in ES6 syntax"
+    },
+    "exportDefault": {
+        "prefix": "edf",
+        "body": "export default ${1:params}",
+        "description": "Export default"
+    },
+
+    "require": {
+        "prefix": "req",
+        "body": "require('${1:package}')",
+        "description": "Require a package"
+    },
+    "moduleExports": {
+        "prefix": "mde",
+        "body": "module.exports = {\n\t$0\n}\n",
+        "description": "Module exports from Common JS, node syntax at ES6"
+    },
+
+    "forEach": {
+        "prefix": "fore",
+        "body": ".forEach(${1:currentItem} => {\n\t${0}\n})",
+        "description": "forEach"
+    },
+    "map": {
+        "prefix": "map",
+        "body": ".map(${1:currentItem} => {\n\t${0}\n})",
+        "description": "map"
+    },
+    "forOf": {
+        "prefix": "fof",
+        "body": "for (const ${1:item} of ${2:object}) {\n\t${0}\n}",
+        "description": "for of"
+    },
+
+    "const": {
+        "prefix": "con",
+        "body": "const ${1:name} = ${2:params}",
+        "description": "const"
+    },
+    "Destructing Object": {
+        "prefix": "coo",
+        "body": "const {${2:propertyName}} = ${1:objectToDestruct}$0",
+        "description": "Creates and assigns a local variable using object destructing"
+    },
+
+    "return": {
+        "prefix": "ret",
+        "body": "return ${1:name}",
+        "description": "return"
+    },
+    "resolve": {
+        "prefix": "res",
+        "body": "resolve(${1:name})",
+        "description": "resolve"
+    },
+
+    "setInterval": {
+        "prefix": "sti",
+        "body": "const timer = setInterval(() => {\n\t${2}\n}, ${1:intervalInms})",
+        "description": "setInterval"
+    },
+    "setTimeOut": {
+        "prefix": "sto",
+        "body": "const timer = setTimeout(() => {\n\t${2}\n}, ${1:delayInms})",
+        "description": "setTimeOut"
+    },
+    "promise": {
+        "prefix": "retp",
+        "body": "return new Promise((resolve, reject) => {\n\t${1}\n})",
+        "description": "new promise"
+    },
+
+    "consoleLogObject": {
+        "prefix": "log",
+        "body": "console.log('${1:object} :', ${1:object})",
+        "description": "Displays an object in the console with its name"
+    },
+    "Comment Block": {
+        "prefix": "doc",
+        "body": ["/**", " * ${1}", " */"]
+    },
+    "useState": {
+        "prefix": "uses",
+        "body": ["const [${1:state}, set${2}] = useState(${3:initialState})$0"],
+        "description": ["hooks useState"]
+    },
+    "useEffect": {
+        "prefix": "usee",
+        "body": ["useEffect(() => {", "    ${2:effect}", "}, [${1:input}])"],
+        "description": ["hooks useEffect"]
+    },
+    "Import PropTypes": {
+        "prefix": "impt",
+        "body": ["import PropTypes from 'prop-types'"],
+        "description": "Import PropTypes"
+    },
+    "Import React": {
+        "prefix": "imr",
+        "body": ["import React from 'react'", ""]
+    },
+    "Import React, { Component }": {
+        "prefix": "imrc",
+        "body": ["import React, { Component } from 'react'", ""]
+    },
+
+    "React Class Export Component": {
+        "prefix": "recl",
+        "body": [
+            "import React, { Component } from 'react'",
+            "",
+            "class ${1:componentName} extends Component {",
+            "  render() {",
+            "    return (",
+            "      <div>",
+            "        $0",
+            "      </div>",
+            "    )",
+            "  }",
+            "}",
+            "",
+            "export default ${1:componentName}",
+            ""
+        ],
+        "description": "Creates a React component class with ES7 module system"
+    },
+    "React Functional Export Component": {
+        "prefix": "ref",
+        "body": [
+            "import React from 'react'",
+            "",
+            "const ${1:componentName} = () => {",
+            "  return (",
+            "    <div>",
+            "      $0",
+            "    </div>",
+            "  )",
+            "}",
+            "",
+            "export default ${1:componentName}",
+            ""
+        ],
+        "description": "Creates a React Functional Component with ES7 module system"
+    },
+    "Vue Component": {
+        "prefix": "vuetpl",
+        "body": [
+            "<template>",
+            "    <div>",
+            "       ",
+            "    </div>",
+            "</template>",
+            "<script>",
+            "",
+            "export default {",
+            "    name: '',",
+            "    props: {},",
+            "    components: {},",
+            "    data() {,",
+            "    },",
+            "    methods: {},",
+            "}",
+            "</script>",
+            "<style lang='less' scoped>",
+            "</style>",
+            ""
+        ],
+        "description": "vue components"
+    }
+}
