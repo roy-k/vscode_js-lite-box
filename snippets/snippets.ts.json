@@ -17,17 +17,17 @@
 
     "declareNamedFunction": {
         "prefix": "fn",
-        "body": "function(${1:params}) {\n\t$0\n}\n",
+        "body": "function(${1:params}:${2:type}) {\n\t$0\n}\n",
         "description": "named function in ES6 syntax"
     },
     "declareAsyncNamedFunction": {
         "prefix": "afn",
-        "body": "async function(${1:params}) {\n\t$0\n}\n",
+        "body": "async function(${1:params}:${2:type}) {\n\t$0\n}\n",
         "description": "async named function in ES6 syntax"
     },
     "exportNamedFunction": {
         "prefix": "efn",
-        "body": "export function(${1:params}) {\n\t$0\n}\n",
+        "body": "export function(${1:params}:${2:type}) {\n\t$0\n}\n",
         "description": "Export named function in ES6 syntax"
     },
     "exportDefault": {
@@ -115,8 +115,11 @@
         "body": [
             "import React, { Component } from 'react'",
             "",
-            "class ${1:componentName} extends Component {",
-            "  state = {}",
+            "type ${1:componentName}Props = {}",
+            "type ${1:componentName}State = {}",
+            "class ${1:componentName} extends Component<${1:componentName}Props, ${1:componentName}State> {",
+            "  state:${1:componentName}State = {}",
+            "",
             "  render() {",
             "    return (",
             "      <div>",
@@ -136,7 +139,8 @@
         "body": [
             "import React from 'react'",
             "",
-            "function ${1:componentName}(props) {",
+            "type ${1:componentName}Props = {}",
+            "function ${1:componentName}(props: ${1:componentName}Props) {",
             "  return (",
             "    <div>",
             "      $0",
@@ -147,6 +151,6 @@
             "export default ${1:componentName}",
             ""
         ],
-        "description": "Creates a React Functional Component with ES7 module system"
+        "description": "React Functional Component"
     }
 }

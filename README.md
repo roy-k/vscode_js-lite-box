@@ -10,29 +10,26 @@ collect my snippets. since others doesn't fit well.
 | imn    | imports entire module   |
 | imd    | imports with destruct   |
 | edf    | export default          |
-| edfn   | export const function   |
-| req    | require()               |
-| med    | module.exports          |
+| fn    | declare named function        |
+| afn    | declare async named function        |
+| efn   | export function   |
+| edf    | export default          |
+| req    | require('')               |
+| mde    | module.exports          |
 | fore   | forEach                 |
 | map    | map                     |
 | fof    | for of                  |
 | con    | const                   |
 | coo    | const with destruct     |
 | ret    | return                  |
-| res    | resolve                 |
 | sti    | setInterval             |
 | sto    | setTimeout              |
-| retp   | new promise             |
-| log    | console.log             |
-| doc    | comment block           |
-| uses   | useState                |
-| usee   | useEffect               |
-| impt   | import PropTypes        |
+| rtp   | new promise             |
+| uss   | useState                |
+| use   | useEffect               |
 | imr    | import React            |
-| imrc   | import React Components |
-| recl   | create react class      |
-| ref    | create react function   |
-| vuetpl | create vue components   |
+| rcc   | create react class      |
+| rcf    | create react function   |
 
 
 ## Release Notes
@@ -40,3 +37,9 @@ collect my snippets. since others doesn't fit well.
 ### 0.0.1
 
     just a new one!
+### 0.1.0
+
+    - fixed .jsx support
+    - add ts(.ts/.tsx) support
+    - add some snippets
+    - remove some useless snippets
