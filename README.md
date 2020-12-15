@@ -43,3 +43,7 @@ collect my snippets. since others doesn't fit well.
     - add ts(.ts/.tsx) support
     - add some snippets
     - remove some useless snippets
+### 0.2.0
+
+    - fixed fn eg. add name props
+    - refactor rcf/rcc ts/tsx, type -> interface

@@ -2,7 +2,7 @@
     "name": "js-lite-box",
     "displayName": "js-lite-box",
     "description": "js/ts/react代码段",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "icon": "assets/images/icon.jpg",
     "publisher": "roy",
     "scripts": {
